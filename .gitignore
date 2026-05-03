@@ -1,0 +1,21 @@
+# Scripts temporários de teste
+*.sh.bak
+/fase1-basic/testar_samba.sh
+
+# Backup automáticos
+*.bak
+*.orig
+
+# Segredos / credenciais — NUNCA versionar
+*senha*
+*password*
+*secret*
+credentials.txt
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+*.swp
