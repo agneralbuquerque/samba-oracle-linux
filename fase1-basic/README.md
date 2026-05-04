@@ -1,8 +1,6 @@
-# Fase 1 — Samba Standalone (autenticação local + guest)
+# Fase 1 — Samba Standalone (acesso guest)
 
-Configuração inicial do Samba em modo **standalone** com:
-- Acesso por **usuário e senha** local (contas do sistema)
-- Acesso **guest** (sem senha) para compartilhamentos públicos
+Configuração inicial do Samba em modo **standalone** com **compartilhamento único guest**.
 
 ## Ambiente
 
@@ -20,6 +18,10 @@ Configuração inicial do Samba em modo **standalone** com:
 | Samba | standalone (sem domínio) |
 
 Compartilhamento atual publicado: `inove` em `/work0/inove`.
+
+## Cliente Windows 11
+
+- Ajustes e validações do cliente em [windows11-acesso-samba.md](windows11-acesso-samba.md)
 
 ## Documentos desta fase
 

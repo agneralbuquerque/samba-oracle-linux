@@ -25,7 +25,8 @@ samba-oracle-linux/
 │   ├── instalacao.md          # Passos de instalação
 │   ├── smb.conf               # Arquivo de configuração (fase 1)
 │   ├── comandos-uteis.md      # Comandos de diagnóstico e teste
-│   └── troubleshooting.md     # Problemas conhecidos e soluções
+│   ├── troubleshooting.md     # Problemas conhecidos e soluções
+│   └── windows11-acesso-samba.md # Ajustes e validações no cliente Windows 11
 └── fase2-ads/
     ├── README.md              # Visão geral da fase 2
     ├── pre-requisitos.md      # O que preparar antes da migração
@@ -33,7 +34,22 @@ samba-oracle-linux/
     ├── smb.conf               # Arquivo de configuração (fase 2 - ADS)
     ├── comandos-uteis.md      # Comandos específicos para ADS
     └── troubleshooting.md     # Problemas conhecidos no ambiente ADS
+
+└── scripts/
+    ├── linux/
+    │   ├── aplicar_samba_inove.sh   # Automatiza setup do Samba no servidor
+    │   └── validar_samba_inove.sh   # Validação rápida do servidor Samba
+    └── windows11/
+        ├── configurar_cliente_samba.ps1 # Ajustes do cliente Windows 11
+        └── testar_acesso_samba.ps1      # Testes de conectividade e acesso
 ```
+
+## Execução rápida (scripts)
+
+- Servidor Linux: `sudo bash scripts/linux/aplicar_samba_inove.sh`
+- Validação Linux: `sudo bash scripts/linux/validar_samba_inove.sh`
+- Cliente Windows 11 (Admin): `./scripts/windows11/configurar_cliente_samba.ps1`
+- Testes Windows 11: `./scripts/windows11/testar_acesso_samba.ps1`
 
 ## Referências rápidas
 
