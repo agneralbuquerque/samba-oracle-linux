@@ -28,14 +28,10 @@ systemctl status smb nmb
 ## 4. Criar diretório de compartilhamento
 
 ```bash
-# Exemplo: compartilhamento geral com guest
-mkdir -p /srv/samba/publico
-chmod 0777 /srv/samba/publico
-chown nobody:nobody /srv/samba/publico
-
-# Exemplo: compartilhamento privado por usuário
-mkdir -p /srv/samba/privado
-chmod 0750 /srv/samba/privado
+# Compartilhamento único
+mkdir -p /work0/inove
+chmod 0777 /work0/inove
+chown nobody:nobody /work0/inove
 ```
 
 ## 5. Configurar o smb.conf
@@ -77,14 +73,14 @@ setsebool -P samba_enable_home_dirs on    # se compartilhar home
 setsebool -P samba_export_all_rw on      # para diretórios customizados
 
 # Marcar o diretório com o contexto correto
-semanage fcontext -a -t samba_share_t "/srv/samba(/.*)?"
-restorecon -Rv /srv/samba
+semanage fcontext -a -t samba_share_t "/work0(/.*)?"
+restorecon -Rv /work0
 ```
 
 Verificar contexto:
 
 ```bash
-ls -lZ /srv/samba
+ls -lZ /work0
 ```
 
 ## 8. Configurar o Firewall
@@ -112,13 +108,12 @@ Do próprio servidor:
 
 ```bash
 smbclient -L localhost -U%          # listar compartilhamentos como guest
-smbclient //localhost/publico -U%   # acessar compartilhamento guest
-smbclient //localhost/privado -U nome_usuario
+smbclient //localhost/inove -U%     # acessar compartilhamento guest
 ```
 
 De um cliente Windows:
 
 ```
-\\inova\publico
-\\inova\privado
+\\inove\inove
+\\192.168.1.16\inove
 ```

@@ -8,8 +8,8 @@ Configuração inicial do Samba em modo **standalone** com:
 
 | Item | Valor |
 |------|-------|
-| Hostname | `inova` |
-| FQDN | `fileserver-inova-2cri-mcp.7locacoes.vpn` |
+| Hostname | `inove` |
+| FQDN | `inove` |
 | SO | Oracle Linux Server 8.10 |
 | Kernel | `5.15.0-206.153.7.1.el8uek.x86_64` |
 | Disco `/` | 40 GB (6% usado) |
@@ -18,6 +18,8 @@ Configuração inicial do Samba em modo **standalone** com:
 | SELinux | enabled / enforcing |
 | Firewall | firewalld (running) |
 | Samba | standalone (sem domínio) |
+
+Compartilhamento atual publicado: `inove` em `/work0/inove`.
 
 ## Documentos desta fase
 

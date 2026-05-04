@@ -21,18 +21,14 @@ testparm -s         # exibe configuração efetiva (sem comentários)
 smbclient -L localhost -U%
 
 # De outro Linux na rede
-smbclient -L //inova -U%
-smbclient -L //inova -U nome_usuario
+smbclient -L //inove -U%
 ```
 
 ## Acessar compartilhamento via terminal
 
 ```bash
 # Guest
-smbclient //inova/publico -U%
-
-# Autenticado
-smbclient //inova/privado -U nome_usuario
+smbclient //inove/inove -U%
 ```
 
 ## Gerenciar usuários Samba
